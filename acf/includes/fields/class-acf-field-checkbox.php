@@ -151,7 +151,7 @@ class acf_field_checkbox extends acf_field {
 		$atts = array(
 			'type'	=> 'checkbox',
 			'class'	=> 'acf-checkbox-toggle',
-			'label'	=> __("Toggle All", 'acf')
+			'label'	=> __("Toggle All", 'osen')
 		);
 		
 		
@@ -218,7 +218,7 @@ class acf_field_checkbox extends acf_field {
 		
 		
 		// append button
-		$html .= '<li><a href="#" class="button acf-add-checkbox">' . esc_attr__('Add new choice', 'acf') . '</a></li>' . "\n";
+		$html .= '<li><a href="#" class="button acf-add-checkbox">' . esc_attr__('Add new choice', 'osen') . '</a></li>' . "\n";
 		
 		
 		// return
@@ -355,7 +355,7 @@ class acf_field_checkbox extends acf_field {
 			'name'			=> 'allow_custom',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
-			'message'		=> __("Allow 'custom' values to be added", 'acf'),
+			'message'		=> __("Allow 'custom' values to be added", 'osen'),
 		));
 		
 		
@@ -366,7 +366,7 @@ class acf_field_checkbox extends acf_field {
 			'name'			=> 'save_custom',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
-			'message'		=> __("Save 'custom' values to the field's choices", 'acf'),
+			'message'		=> __("Save 'custom' values to the field's choices", 'osen'),
 			'conditions'	=> array(
 				'field'		=> 'allow_custom',
 				'operator'	=> '==',

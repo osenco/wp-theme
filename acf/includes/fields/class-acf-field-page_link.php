@@ -174,7 +174,7 @@ class acf_field_page_link extends acf_field {
 			
 			// append
 			$results[] = array(
-				'text'		=> __('Archives', 'acf'),
+				'text'		=> __('Archives', 'osen'),
 				'children'	=> $archives
 			);
 			
@@ -266,7 +266,7 @@ class acf_field_page_link extends acf_field {
 		
 		
 		// look for parent
-		$search = '| ' . __('Parent', 'acf') . ':';
+		$search = '| ' . __('Parent', 'osen') . ':';
 		$pos = strpos($text, $search);
 		
 		if( $pos !== false ) {

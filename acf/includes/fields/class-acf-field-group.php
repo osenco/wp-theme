@@ -472,7 +472,7 @@ class acf_field__group extends acf_field {
 		// layout
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Layout','acf'),
-			'instructions'	=> __('Specify the style used to render the selected fields', 'acf'),
+			'instructions'	=> __('Specify the style used to render the selected fields', 'osen'),
 			'type'			=> 'radio',
 			'name'			=> 'layout',
 			'layout'		=> 'horizontal',

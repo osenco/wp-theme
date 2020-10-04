@@ -98,7 +98,7 @@ class acf_location_attachment extends acf_location {
 		// vars
 		$mimes = get_allowed_mime_types();
 		$choices = array(
-			'all' => __('All', 'acf')
+			'all' => __('All', 'osen')
 		);
 		
 		
@@ -106,7 +106,7 @@ class acf_location_attachment extends acf_location {
 		foreach( $mimes as $type => $mime ) {
 			
 			$group = current( explode('/', $mime) );
-			$choices[ $group ][ $group ] = sprintf( __('All %s formats', 'acf'), $group);
+			$choices[ $group ][ $group ] = sprintf( __('All %s formats', 'osen'), $group);
 			$choices[ $group ][ $mime ] = "$type ($mime)";
 			
 		}

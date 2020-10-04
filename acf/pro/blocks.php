@@ -370,8 +370,8 @@ function acf_enqueue_block_assets() {
 	
 	// Localize text.
 	acf_localize_text(array(
-		'Switch to Edit'		=> __('Switch to Edit', 'acf'),
-		'Switch to Preview'		=> __('Switch to Preview', 'acf'),
+		'Switch to Edit'		=> __('Switch to Edit', 'osen'),
+		'Switch to Preview'		=> __('Switch to Preview', 'osen'),
 	));
 	
 	// Get block types.

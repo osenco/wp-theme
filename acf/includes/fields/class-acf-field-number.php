@@ -216,7 +216,7 @@ class acf_field_number extends acf_field {
 			// allow blank to be saved
 			if( !empty($value) ) {
 				
-				$valid = __('Value must be a number', 'acf');
+				$valid = __('Value must be a number', 'osen');
 				
 			}
 			
@@ -234,7 +234,7 @@ class acf_field_number extends acf_field {
 		// min
 		if( is_numeric($field['min']) && $value < floatval($field['min'])) {
 			
-			$valid = sprintf(__('Value must be equal to or higher than %d', 'acf'), $field['min'] );
+			$valid = sprintf(__('Value must be equal to or higher than %d', 'osen'), $field['min'] );
 			
 		}
 		
@@ -242,7 +242,7 @@ class acf_field_number extends acf_field {
 		// max
 		if( is_numeric($field['max']) && $value > floatval($field['max']) ) {
 			
-			$valid = sprintf(__('Value must be equal to or lower than %d', 'acf'), $field['max'] );
+			$valid = sprintf(__('Value must be equal to or lower than %d', 'osen'), $field['max'] );
 			
 		}
 		

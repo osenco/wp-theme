@@ -86,7 +86,7 @@ class acf_admin_field_groups {
 		
 		
 		// modify publish post status
-		$wp_post_statuses['publish']->label_count = _n_noop( 'Active <span class="count">(%s)</span>', 'Active <span class="count">(%s)</span>', 'acf' );
+		$wp_post_statuses['publish']->label_count = _n_noop( 'Active <span class="count">(%s)</span>', 'Active <span class="count">(%s)</span>', 'osen' );
 		
 		
 		// reorder trash to end
@@ -153,7 +153,7 @@ class acf_admin_field_groups {
 			$total = count($ids);
 			
 			// Generate text.
-			$text = sprintf( _n( 'Field group duplicated.', '%s field groups duplicated.', $total, 'acf' ), $total );
+			$text = sprintf( _n( 'Field group duplicated.', '%s field groups duplicated.', $total, 'osen' ), $total );
 			
 			// Add links to text.
 			$links = array();
@@ -240,7 +240,7 @@ class acf_admin_field_groups {
 			$total = count($ids);
 			
 			// Generate text.
-			$text = sprintf( _n( 'Field group synchronised.', '%s field groups synchronised.', $total, 'acf' ), $total );
+			$text = sprintf( _n( 'Field group synchronised.', '%s field groups synchronised.', $total, 'osen' ), $total );
 			
 			// Add links to text.
 			$links = array();
@@ -411,7 +411,7 @@ class acf_admin_field_groups {
 		
 		
 		// add view
-		$views['json'] = '<a' . $class . ' href="' . admin_url($this->url . '&post_status=sync') . '">' . __('Sync available', 'acf') . ' <span class="count">(' . $total . ')</span></a>';
+		$views['json'] = '<a' . $class . ' href="' . admin_url($this->url . '&post_status=sync') . '">' . __('Sync available', 'osen') . ' <span class="count">(' . $total . ')</span></a>';
 		
 		
 		// return
@@ -524,10 +524,10 @@ class acf_admin_field_groups {
 		
 		return array(
 			'cb'	 				=> '<input type="checkbox" />',
-			'title' 				=> __('Title', 'acf'),
-			'acf-fg-description'	=> __('Description', 'acf'),
-			'acf-fg-status' 		=> '<i class="acf-icon -dot-3 small acf-js-tooltip" title="' . esc_attr__('Status', 'acf') . '"></i>',
-			'acf-fg-count' 			=> __('Fields', 'acf'),
+			'title' 				=> __('Title', 'osen'),
+			'acf-fg-description'	=> __('Description', 'osen'),
+			'acf-fg-status' 		=> '<i class="acf-icon -dot-3 small acf-js-tooltip" title="' . esc_attr__('Status', 'osen') . '"></i>',
+			'acf-fg-count' 			=> __('Fields', 'osen'),
 		);
 		
 	}
@@ -574,17 +574,17 @@ class acf_admin_field_groups {
 			
 			if( isset($this->sync[ $field_group['key'] ]) ) {
 				
-				echo '<i class="acf-icon -sync grey small acf-js-tooltip" title="' . esc_attr__('Sync available', 'acf') .'"></i> ';
+				echo '<i class="acf-icon -sync grey small acf-js-tooltip" title="' . esc_attr__('Sync available', 'osen') .'"></i> ';
 				
 			}
 			
 			if( $field_group['active'] ) {
 				
-				//echo '<i class="acf-icon -check small acf-js-tooltip" title="' . esc_attr__('Active', 'acf') .'"></i> ';
+				//echo '<i class="acf-icon -check small acf-js-tooltip" title="' . esc_attr__('Active', 'osen') .'"></i> ';
 				
 			} else {
 				
-				echo '<i class="acf-icon -minus yellow small acf-js-tooltip" title="' . esc_attr__('Inactive', 'acf') . '"></i> ';
+				echo '<i class="acf-icon -minus yellow small acf-js-tooltip" title="' . esc_attr__('Inactive', 'osen') . '"></i> ';
 				
 			}
 	    
@@ -683,7 +683,7 @@ class acf_admin_field_groups {
 			// vars
 			var post_id	= id.replace('post-', '');
 			var url = '<?php echo esc_url( admin_url( $this->url . '&acfduplicate=__post_id__&_wpnonce=' . wp_create_nonce('bulk-posts') ) ); ?>';
-			var $span = $('<span class="acf-duplicate-field-group"><a title="<?php _e('Duplicate this item', 'acf'); ?>" href="' + url.replace('__post_id__', post_id) + '"><?php _e('Duplicate', 'acf'); ?></a> | </span>');
+			var $span = $('<span class="acf-duplicate-field-group"><a title="<?php _e('Duplicate this item', 'osen'); ?>" href="' + url.replace('__post_id__', post_id) + '"><?php _e('Duplicate', 'osen'); ?></a> | </span>');
 			
 			
 			// replace
@@ -699,7 +699,7 @@ class acf_admin_field_groups {
 	
 	
 	// modify bulk actions
-	$('#bulk-action-selector-bottom option[value="edit"]').attr('value','acfduplicate').text('<?php _e( 'Duplicate', 'acf' ); ?>');
+	$('#bulk-action-selector-bottom option[value="edit"]').attr('value','acfduplicate').text('<?php _e( 'Duplicate', 'osen' ); ?>');
 	
 	
 	// clean up table
@@ -716,7 +716,7 @@ class acf_admin_field_groups {
 	
 	
 	// search
-	$('.subsubsub').append(' | <li><a href="#" class="acf-toggle-search"><?php _e('Search', 'acf'); ?></a></li>');
+	$('.subsubsub').append(' | <li><a href="#" class="acf-toggle-search"><?php _e('Search', 'osen'); ?></a></li>');
 	
 	
 	// events
@@ -775,7 +775,7 @@ class acf_admin_field_groups {
 	?>
 	<tr <?php if($i%2 == 0): ?>class="alternate"<?php endif; ?>>
 		<th class="check-column" scope="row">
-			<label for="cb-select-<?php echo esc_attr($key); ?>" class="screen-reader-text"><?php echo esc_html(sprintf(__('Select %s', 'acf'), $title)); ?></label>
+			<label for="cb-select-<?php echo esc_attr($key); ?>" class="screen-reader-text"><?php echo esc_html(sprintf(__('Select %s', 'osen'), $title)); ?></label>
 			<input type="checkbox" value="<?php echo esc_attr($key); ?>" name="post[]" id="cb-select-<?php echo esc_attr($key); ?>">
 		</th>
 		<td class="post-title page-title column-title">
@@ -783,7 +783,7 @@ class acf_admin_field_groups {
 				<span class="row-title"><?php echo esc_html($title); ?></span><span class="acf-description"><?php echo esc_html($key); ?>.json</span>
 			</strong>
 			<div class="row-actions">
-				<span class="import"><a title="<?php echo esc_attr( __('Synchronise field group', 'acf') ); ?>" href="<?php echo esc_url($url); ?>"><?php _e( 'Sync', 'acf' ); ?></a></span>
+				<span class="import"><a title="<?php echo esc_attr( __('Synchronise field group', 'osen') ); ?>" href="<?php echo esc_url($url); ?>"><?php _e( 'Sync', 'osen' ); ?></a></span>
 			</div>
 		</td>
 		<?php foreach( $columns as $column ): ?>
@@ -813,7 +813,7 @@ class acf_admin_field_groups {
 	
 	
 	// set only options
-	$('#bulk-action-selector-bottom').html('<option value="-1"><?php _e('Bulk Actions'); ?></option><option value="acfsync"><?php _e('Sync', 'acf'); ?></option>');
+	$('#bulk-action-selector-bottom').html('<option value="-1"><?php _e('Bulk Actions'); ?></option><option value="acfsync"><?php _e('Sync', 'osen'); ?></option>');
 		
 })(jQuery);
 </script>

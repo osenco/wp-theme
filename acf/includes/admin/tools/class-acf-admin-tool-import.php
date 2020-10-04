@@ -23,7 +23,7 @@ class ACF_Admin_Tool_Import extends ACF_Admin_Tool {
 		
 		// vars
 		$this->name = 'import';
-		$this->title = __("Import Field Groups", 'acf');
+		$this->title = __("Import Field Groups", 'osen');
     	$this->icon = 'dashicons-upload';
     	
 	}
@@ -44,12 +44,12 @@ class ACF_Admin_Tool_Import extends ACF_Admin_Tool {
 	function html() {
 		
 		?>
-		<p><?php _e('Select the Advanced Custom Fields JSON file you would like to import. When you click the import button below, ACF will import the field groups.', 'acf'); ?></p>
+		<p><?php _e('Select the Advanced Custom Fields JSON file you would like to import. When you click the import button below, ACF will import the field groups.', 'osen'); ?></p>
 		<div class="acf-fields">
 			<?php 
 			
 			acf_render_field_wrap(array(
-				'label'		=> __('Select File', 'acf'),
+				'label'		=> __('Select File', 'osen'),
 				'type'		=> 'file',
 				'name'		=> 'acf_import_file',
 				'value'		=> false,
@@ -59,7 +59,7 @@ class ACF_Admin_Tool_Import extends ACF_Admin_Tool {
 			?>
 		</div>
 		<p class="acf-submit">
-			<input type="submit" class="button button-primary" value="<?php _e('Import File', 'acf'); ?>" />
+			<input type="submit" class="button button-primary" value="<?php _e('Import File', 'osen'); ?>" />
 		</p>
 		<?php
 		
@@ -82,7 +82,7 @@ class ACF_Admin_Tool_Import extends ACF_Admin_Tool {
 		
 		// Check file size.
 		if( empty($_FILES['acf_import_file']['size']) ) {
-			return acf_add_admin_notice( __("No file selected", 'acf'), 'warning' );
+			return acf_add_admin_notice( __("No file selected", 'osen'), 'warning' );
 		}
 		
 		// Get file data.
@@ -90,12 +90,12 @@ class ACF_Admin_Tool_Import extends ACF_Admin_Tool {
 		
 		// Check errors.
 		if( $file['error'] ) {
-			return acf_add_admin_notice( __("Error uploading file. Please try again", 'acf'), 'warning' );
+			return acf_add_admin_notice( __("Error uploading file. Please try again", 'osen'), 'warning' );
 		}
 		
 		// Check file type.
 		if( pathinfo($file['name'], PATHINFO_EXTENSION) !== 'json' ) {
-			return acf_add_admin_notice( __("Incorrect file type", 'acf'), 'warning' );
+			return acf_add_admin_notice( __("Incorrect file type", 'osen'), 'warning' );
 		}
 		
 		// Read JSON.
@@ -104,7 +104,7 @@ class ACF_Admin_Tool_Import extends ACF_Admin_Tool {
 		
 		// Check if empty.
     	if( !$json || !is_array($json) ) {
-    		return acf_add_admin_notice( __("Import file empty", 'acf'), 'warning' );
+    		return acf_add_admin_notice( __("Import file empty", 'osen'), 'warning' );
     	}
     	
     	// Ensure $json is an array of groups.
@@ -135,7 +135,7 @@ class ACF_Admin_Tool_Import extends ACF_Admin_Tool {
 		$total = count($ids);
 		
 		// Generate text.
-		$text = sprintf( _n( 'Imported 1 field group', 'Imported %s field groups', $total, 'acf' ), $total );		
+		$text = sprintf( _n( 'Imported 1 field group', 'Imported %s field groups', $total, 'osen' ), $total );		
 		
 		// Add links to text.
 		$links = array();

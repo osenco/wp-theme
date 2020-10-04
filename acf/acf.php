@@ -57,7 +57,7 @@ if (!class_exists('ACF')) :
 
 			// Define settings.
 			$this->settings = array(
-				'name'						=> __('Advanced Custom Fields', 'acf'),
+				'name'						=> __('Advanced Custom Fields', 'osen'),
 				'slug'						=> dirname(ACF_BASENAME),
 				'version'					=> ACF_VERSION,
 				'basename'					=> ACF_BASENAME,
@@ -331,16 +331,16 @@ if (!class_exists('ACF')) :
 			// Register the Field Group post type.
 			register_post_type('acf-field-group', array(
 				'labels'			=> array(
-					'name'					=> __('Field Groups', 'acf'),
-					'singular_name'			=> __('Field Group', 'acf'),
-					'add_new'				=> __('Add New', 'acf'),
-					'add_new_item'			=> __('Add New Field Group', 'acf'),
-					'edit_item'				=> __('Edit Field Group', 'acf'),
-					'new_item'				=> __('New Field Group', 'acf'),
-					'view_item'				=> __('View Field Group', 'acf'),
-					'search_items'			=> __('Search Field Groups', 'acf'),
-					'not_found'				=> __('No Field Groups found', 'acf'),
-					'not_found_in_trash'	=> __('No Field Groups found in Trash', 'acf'),
+					'name'					=> __('Field Groups', 'osen'),
+					'singular_name'			=> __('Field Group', 'osen'),
+					'add_new'				=> __('Add New', 'osen'),
+					'add_new_item'			=> __('Add New Field Group', 'osen'),
+					'edit_item'				=> __('Edit Field Group', 'osen'),
+					'new_item'				=> __('New Field Group', 'osen'),
+					'view_item'				=> __('View Field Group', 'osen'),
+					'search_items'			=> __('Search Field Groups', 'osen'),
+					'not_found'				=> __('No Field Groups found', 'osen'),
+					'not_found_in_trash'	=> __('No Field Groups found in Trash', 'osen'),
 				),
 				'public'			=> false,
 				'hierarchical'		=> true,
@@ -363,16 +363,16 @@ if (!class_exists('ACF')) :
 			// Register the Field post type.
 			register_post_type('acf-field', array(
 				'labels'			=> array(
-					'name'					=> __('Fields', 'acf'),
-					'singular_name'			=> __('Field', 'acf'),
-					'add_new'				=> __('Add New', 'acf'),
-					'add_new_item'			=> __('Add New Field', 'acf'),
-					'edit_item'				=> __('Edit Field', 'acf'),
-					'new_item'				=> __('New Field', 'acf'),
-					'view_item'				=> __('View Field', 'acf'),
-					'search_items'			=> __('Search Fields', 'acf'),
-					'not_found'				=> __('No Fields found', 'acf'),
-					'not_found_in_trash'	=> __('No Fields found in Trash', 'acf'),
+					'name'					=> __('Fields', 'osen'),
+					'singular_name'			=> __('Field', 'osen'),
+					'add_new'				=> __('Add New', 'osen'),
+					'add_new_item'			=> __('Add New Field', 'osen'),
+					'edit_item'				=> __('Edit Field', 'osen'),
+					'new_item'				=> __('New Field', 'osen'),
+					'view_item'				=> __('View Field', 'osen'),
+					'search_items'			=> __('Search Fields', 'osen'),
+					'not_found'				=> __('No Fields found', 'osen'),
+					'not_found_in_trash'	=> __('No Fields found in Trash', 'osen'),
 				),
 				'public'			=> false,
 				'hierarchical'		=> true,
@@ -408,12 +408,12 @@ if (!class_exists('ACF')) :
 
 			// Register the Disabled post status.
 			register_post_status('acf-disabled', array(
-				'label'                     => __('Inactive', 'acf'),
+				'label'                     => __('Inactive', 'osen'),
 				'public'                    => true,
 				'exclude_from_search'       => false,
 				'show_in_admin_all_list'    => true,
 				'show_in_admin_status_list' => true,
-				'label_count'               => _n_noop('Inactive <span class="count">(%s)</span>', 'Inactive <span class="count">(%s)</span>', 'acf'),
+				'label_count'               => _n_noop('Inactive <span class="count">(%s)</span>', 'Inactive <span class="count">(%s)</span>', 'osen'),
 			));
 		}
 

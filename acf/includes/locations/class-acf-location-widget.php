@@ -80,7 +80,7 @@ class acf_location_widget extends acf_location {
 		
 		
 		// vars
-		$choices = array( 'all' => __('All', 'acf') );
+		$choices = array( 'all' => __('All', 'osen') );
 		
 		
 		// loop

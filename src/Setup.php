@@ -12,8 +12,13 @@ namespace Osen\Theme\Wpt;
 
 class Setup
 {
-    function __construct()
+    public $styles = [];
+    public $scripts = [];
+
+    function __construct($styles = [], $scripts = [])
     {
+        $this->styles = $styles;
+        $this->scripts = $scripts;
         add_action('after_setup_theme', array($this, 'theme_setup'));
         add_filter('body_class', array($this, 'os_custom_body_class'));
         add_action('wp_print_styles', array($this, 'os_deregister_styles'), 100);
@@ -27,6 +32,7 @@ class Setup
         add_filter('previous_posts_link_attributes', array($this, 'wpse_230552'));
         add_action('pre_get_posts', array($this, 'os_add_custom_type_to_query'));
         add_filter('next_posts_link_attributes', array($this, 'wpse_next'));
+        add_filter('the_tags', array($this, 'tag_badges'), 10, 1);
     }
 
     /**
@@ -97,12 +103,16 @@ class Setup
     function os_en_scripts()
     {
         wp_enqueue_style('style', get_stylesheet_uri());
-        wp_enqueue_style('all', get_template_directory_uri() . '/css/all.css', array(), '');
-        wp_enqueue_style('app', get_template_directory_uri() . '/css/app.css', array(), '');
-
-        wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true);
 
         wp_enqueue_script('jquery');
+
+        foreach ($this->styles as $key => $value) {
+            wp_enqueue_style($key, get_template_directory_uri() . '/' . $value, array());
+        }
+
+        foreach ($this->scripts as $key => $value) {
+            wp_enqueue_script($key, get_template_directory_uri() . '/' . $value['path'], $value['depends'] ?? [], '', $value['footer'] ?? true);
+        }
 
         if (is_singular() && comments_open() && get_option('thread_comments')) {
             wp_enqueue_script('comment-reply');
@@ -136,7 +146,7 @@ class Setup
         } elseif (is_tag()) {
             $title = 'Tagged: ' . single_tag_title('', false);
         } elseif (is_author()) {
-            $title = 'Posts by' . get_the_author();
+            $title = 'Posts by ' . get_the_author();
         } elseif (is_post_type_archive()) {
             $title = post_type_archive_title('', false);
         } elseif (is_tax()) {
@@ -214,5 +224,9 @@ class Setup
         }
 
         return $classes;
+    }
+
+    function tag_badges($html) {
+return str_replace('<a', '<a class="badge badge-pill badge-light"', $html);
     }
 }

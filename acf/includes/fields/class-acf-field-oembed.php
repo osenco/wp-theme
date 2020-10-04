@@ -202,7 +202,7 @@ class acf_field_oembed extends acf_field {
 			'class' => 'acf-oembed',
 		);
 		
-		// <strong><?php _e("Error.", 'acf'); </strong> _e("No embed found for the given URL.", 'acf');
+		// <strong><?php _e("Error.", 'osen'); </strong> _e("No embed found for the given URL.", 'osen');
 		
 		// value
 		if( $field['value'] ) $atts['class'] .= ' has-value';
@@ -213,7 +213,7 @@ class acf_field_oembed extends acf_field {
 	<?php acf_hidden_input(array( 'class' => 'input-value', 'name' => $field['name'], 'value' => $field['value'] )); ?>
 	
 	<div class="title">
-		<?php acf_text_input(array( 'class' => 'input-search', 'value' => $field['value'], 'placeholder' => __("Enter URL", 'acf'), 'autocomplete' => 'off'  )); ?>
+		<?php acf_text_input(array( 'class' => 'input-search', 'value' => $field['value'], 'placeholder' => __("Enter URL", 'osen'), 'autocomplete' => 'off'  )); ?>
 		<div class="acf-actions -hover">
 			<a data-name="clear-button" href="#" class="acf-icon -cancel grey"></a>
 		</div>
@@ -254,7 +254,7 @@ class acf_field_oembed extends acf_field {
 			'label'			=> __('Embed Size','acf'),
 			'type'			=> 'text',
 			'name'			=> 'width',
-			'prepend'		=> __('Width', 'acf'),
+			'prepend'		=> __('Width', 'osen'),
 			'append'		=> 'px',
 			'placeholder'	=> $this->width
 		));
@@ -265,7 +265,7 @@ class acf_field_oembed extends acf_field {
 			'label'			=> __('Embed Size','acf'),
 			'type'			=> 'text',
 			'name'			=> 'height',
-			'prepend'		=> __('Height', 'acf'),
+			'prepend'		=> __('Height', 'osen'),
 			'append'		=> 'px',
 			'placeholder'	=> $this->height,
 			'_append' 		=> 'width'

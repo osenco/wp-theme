@@ -46,7 +46,7 @@ class ACF_Admin_Updates {
 		
 		// Create new notice.
 		acf_new_admin_notice(array(
-			'text'	=> __('<b>Error</b>. Could not connect to update server', 'acf') . ' <span class="description">(' . esc_html( $wp_error->get_error_message() ) . ').</span>',
+			'text'	=> __('<b>Error</b>. Could not connect to update server', 'osen') . ' <span class="description">(' . esc_html( $wp_error->get_error_message() ) . ').</span>',
 			'type'	=> 'error'
 		));	
 	}
@@ -188,7 +188,7 @@ class ACF_Admin_Updates {
 	        	if( $update && !$update['package'] ) {
 		        	$this->view['update_available'] = false;
 		        	acf_new_admin_notice(array(
-						'text'	=> __('<b>Error</b>. Could not authenticate update package. Please check again or deactivate and reactivate your ACF PRO license.', 'acf'),
+						'text'	=> __('<b>Error</b>. Could not authenticate update package. Please check again or deactivate and reactivate your ACF PRO license.', 'osen'),
 						'type'	=> 'error'
 					));	
 	        	}

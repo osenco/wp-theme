@@ -119,8 +119,8 @@ class ACF_Admin {
 			'version'		=> acf_get_setting('version'),
 			'have_pro'		=> acf_get_setting('pro'),
 			'tabs'			=> array(
-				'new'			=> __("What's New", 'acf'),
-				'changelog'		=> __("Changelog", 'acf')
+				'new'			=> __("What's New", 'osen'),
+				'changelog'		=> __("Changelog", 'osen')
 			),
 			'active'		=> 'new'
 		);

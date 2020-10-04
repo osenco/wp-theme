@@ -70,8 +70,8 @@ class acf_field_gallery extends acf_field {
 		
 		// localize
 		acf_localize_text(array(
-		   	'Add Image to Gallery'		=> __('Add Image to Gallery', 'acf'),
-			'Maximum selection reached'	=> __('Maximum selection reached', 'acf'),
+		   	'Add Image to Gallery'		=> __('Add Image to Gallery', 'osen'),
+			'Maximum selection reached'	=> __('Maximum selection reached', 'osen'),
 	   	));
 	}
 	
@@ -319,7 +319,7 @@ class acf_field_gallery extends acf_field {
 		// Get attachment dimensions / time / size.
 		$dimensions = '';
 		if( $attachment['type'] === 'audio' ) {
-			$dimensions = __('Length', 'acf') . ': ' . $attachment['fileLength'];	
+			$dimensions = __('Length', 'osen') . ': ' . $attachment['fileLength'];	
 		} elseif( !empty($attachment['width']) ) {
 			$dimensions = $attachment['width'] . ' x ' . $attachment['height'];
 		}
@@ -334,8 +334,8 @@ class acf_field_gallery extends acf_field {
 			<p class="uploaded"><?php echo esc_html($attachment['dateFormatted']); ?></p>
 			<p class="dimensions"><?php echo esc_html($dimensions); ?></p>
 			<p class="actions">
-				<a href="#" class="acf-gallery-edit" data-id="<?php echo esc_attr($id); ?>"><?php _e('Edit', 'acf'); ?></a>
-				<a href="#" class="acf-gallery-remove" data-id="<?php echo esc_attr($id); ?>"><?php _e('Remove', 'acf'); ?></a>
+				<a href="#" class="acf-gallery-edit" data-id="<?php echo esc_attr($id); ?>"><?php _e('Edit', 'osen'); ?></a>
+				<a href="#" class="acf-gallery-remove" data-id="<?php echo esc_attr($id); ?>"><?php _e('Remove', 'osen'); ?></a>
 			</p>
 		</div>
 		<table class="form-table">
@@ -350,7 +350,7 @@ class acf_field_gallery extends acf_field {
 					'name'		=> 'title',
 					'prefix'	=> $prefix,
 					'type'		=> 'text',
-					'label'		=> __('Title', 'acf'),
+					'label'		=> __('Title', 'osen'),
 					'value'		=> $attachment['title']
 				), 'tr');
 				
@@ -359,7 +359,7 @@ class acf_field_gallery extends acf_field {
 					'name'		=> 'caption',
 					'prefix'	=> $prefix,
 					'type'		=> 'textarea',
-					'label'		=> __('Caption', 'acf'),
+					'label'		=> __('Caption', 'osen'),
 					'value'		=> $attachment['caption']
 				), 'tr');
 				
@@ -368,7 +368,7 @@ class acf_field_gallery extends acf_field {
 					'name'		=> 'alt',
 					'prefix'	=> $prefix,
 					'type'		=> 'text',
-					'label'		=> __('Alt Text', 'acf'),
+					'label'		=> __('Alt Text', 'osen'),
 					'value'		=> $attachment['alt']
 				), 'tr');
 				
@@ -377,7 +377,7 @@ class acf_field_gallery extends acf_field {
 					'name'		=> 'description',
 					'prefix'	=> $prefix,
 					'type'		=> 'textarea',
-					'label'		=> __('Description', 'acf'),
+					'label'		=> __('Description', 'osen'),
 					'value'		=> $attachment['description']
 				), 'tr');
 				
@@ -475,7 +475,7 @@ class acf_field_gallery extends acf_field {
 							<?php endif; ?>
 						</div>
 						<div class="actions">
-							<a class="acf-icon -cancel dark acf-gallery-remove" href="#" data-id="<?php echo esc_attr($a_id); ?>" title="<?php _e('Remove', 'acf'); ?>"></a>
+							<a class="acf-icon -cancel dark acf-gallery-remove" href="#" data-id="<?php echo esc_attr($a_id); ?>" title="<?php _e('Remove', 'osen'); ?>"></a>
 						</div>
 					</div>
 				<?php endforeach; ?>
@@ -484,15 +484,15 @@ class acf_field_gallery extends acf_field {
 		<div class="acf-gallery-toolbar">
 			<ul class="acf-hl">
 				<li>
-					<a href="#" class="acf-button button button-primary acf-gallery-add"><?php _e('Add to gallery', 'acf'); ?></a>
+					<a href="#" class="acf-button button button-primary acf-gallery-add"><?php _e('Add to gallery', 'osen'); ?></a>
 				</li>
 				<li class="acf-fr">
 					<select class="acf-gallery-sort">
-						<option value=""><?php _e('Bulk actions', 'acf'); ?></option>
-						<option value="date"><?php _e('Sort by date uploaded', 'acf'); ?></option>
-						<option value="modified"><?php _e('Sort by date modified', 'acf'); ?></option>
-						<option value="title"><?php _e('Sort by title', 'acf'); ?></option>
-						<option value="reverse"><?php _e('Reverse current order', 'acf'); ?></option>
+						<option value=""><?php _e('Bulk actions', 'osen'); ?></option>
+						<option value="date"><?php _e('Sort by date uploaded', 'osen'); ?></option>
+						<option value="modified"><?php _e('Sort by date modified', 'osen'); ?></option>
+						<option value="title"><?php _e('Sort by title', 'osen'); ?></option>
+						<option value="reverse"><?php _e('Reverse current order', 'osen'); ?></option>
 					</select>
 				</li>
 			</ul>
@@ -504,10 +504,10 @@ class acf_field_gallery extends acf_field {
 			<div class="acf-gallery-toolbar">
 				<ul class="acf-hl">
 					<li>
-						<a href="#" class="acf-button button acf-gallery-close"><?php _e('Close', 'acf'); ?></a>
+						<a href="#" class="acf-button button acf-gallery-close"><?php _e('Close', 'osen'); ?></a>
 					</li>
 					<li class="acf-fr">
-						<a class="acf-button button button-primary acf-gallery-update" href="#"><?php _e('Update', 'acf'); ?></a>
+						<a class="acf-button button button-primary acf-gallery-update" href="#"><?php _e('Update', 'osen'); ?></a>
 					</li>
 				</ul>
 			</div>
@@ -582,8 +582,8 @@ class acf_field_gallery extends acf_field {
 			'type'			=> 'select',
 			'name'			=> 'insert',
 			'choices' 		=> array(
-				'append'		=> __('Append to the end', 'acf'),
-				'prepend'		=> __('Prepend to the beginning', 'acf')
+				'append'		=> __('Append to the end', 'osen'),
+				'prepend'		=> __('Prepend to the beginning', 'osen')
 			)
 		));
 		
@@ -595,8 +595,8 @@ class acf_field_gallery extends acf_field {
 			'name'			=> 'library',
 			'layout'		=> 'horizontal',
 			'choices' 		=> array(
-				'all'			=> __('All', 'acf'),
-				'uploadedTo'	=> __('Uploaded to post', 'acf')
+				'all'			=> __('All', 'osen'),
+				'uploadedTo'	=> __('Uploaded to post', 'osen')
 			)
 		));
 		
@@ -622,7 +622,7 @@ class acf_field_gallery extends acf_field {
 			'instructions'	=> __('Restrict which images can be uploaded','acf'),
 			'type'			=> 'text',
 			'name'			=> 'min_width',
-			'prepend'		=> __('Width', 'acf'),
+			'prepend'		=> __('Width', 'osen'),
 			'append'		=> 'px',
 		));
 		
@@ -630,7 +630,7 @@ class acf_field_gallery extends acf_field {
 			'label'			=> '',
 			'type'			=> 'text',
 			'name'			=> 'min_height',
-			'prepend'		=> __('Height', 'acf'),
+			'prepend'		=> __('Height', 'osen'),
 			'append'		=> 'px',
 			'_append' 		=> 'min_width'
 		));
@@ -639,7 +639,7 @@ class acf_field_gallery extends acf_field {
 			'label'			=> '',
 			'type'			=> 'text',
 			'name'			=> 'min_size',
-			'prepend'		=> __('File size', 'acf'),
+			'prepend'		=> __('File size', 'osen'),
 			'append'		=> 'MB',
 			'_append' 		=> 'min_width'
 		));	
@@ -651,7 +651,7 @@ class acf_field_gallery extends acf_field {
 			'instructions'	=> __('Restrict which images can be uploaded','acf'),
 			'type'			=> 'text',
 			'name'			=> 'max_width',
-			'prepend'		=> __('Width', 'acf'),
+			'prepend'		=> __('Width', 'osen'),
 			'append'		=> 'px',
 		));
 		
@@ -659,7 +659,7 @@ class acf_field_gallery extends acf_field {
 			'label'			=> '',
 			'type'			=> 'text',
 			'name'			=> 'max_height',
-			'prepend'		=> __('Height', 'acf'),
+			'prepend'		=> __('Height', 'osen'),
 			'append'		=> 'px',
 			'_append' 		=> 'max_width'
 		));
@@ -668,7 +668,7 @@ class acf_field_gallery extends acf_field {
 			'label'			=> '',
 			'type'			=> 'text',
 			'name'			=> 'max_size',
-			'prepend'		=> __('File size', 'acf'),
+			'prepend'		=> __('File size', 'osen'),
 			'append'		=> 'MB',
 			'_append' 		=> 'max_width'
 		));	
@@ -776,7 +776,7 @@ class acf_field_gallery extends acf_field {
 		
 		if( count($value) < $field['min'] ) {
 		
-			$valid = _n( '%s requires at least %s selection', '%s requires at least %s selections', $field['min'], 'acf' );
+			$valid = _n( '%s requires at least %s selection', '%s requires at least %s selections', $field['min'], 'osen' );
 			$valid = sprintf( $valid, $field['label'], $field['min'] );
 			
 		}

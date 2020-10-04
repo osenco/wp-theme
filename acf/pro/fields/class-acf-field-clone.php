@@ -22,7 +22,7 @@ class acf_field_clone extends acf_field {
 		
 		// vars
 		$this->name = 'clone';
-		$this->label = _x('Clone', 'noun', 'acf');
+		$this->label = _x('Clone', 'noun', 'osen');
 		$this->category = 'layout';
 		$this->defaults = array(
 			'clone' 		=> '',
@@ -808,7 +808,7 @@ class acf_field_clone extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Fields', 'acf'),
+			'label'			=> __('Fields', 'osen'),
 			'instructions'	=> __('Select one or more fields you wish to clone','acf'),
 			'type'			=> 'select',
 			'name'			=> 'clone',
@@ -827,7 +827,7 @@ class acf_field_clone extends acf_field {
 		// display
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Display','acf'),
-			'instructions'	=> __('Specify the style used to render the clone field', 'acf'),
+			'instructions'	=> __('Specify the style used to render the clone field', 'osen'),
 			'type'			=> 'select',
 			'name'			=> 'display',
 			'class'			=> 'setting-display',
@@ -841,7 +841,7 @@ class acf_field_clone extends acf_field {
 		// layout
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Layout','acf'),
-			'instructions'	=> __('Specify the style used to render the selected fields', 'acf'),
+			'instructions'	=> __('Specify the style used to render the selected fields', 'osen'),
 			'type'			=> 'radio',
 			'name'			=> 'layout',
 			'layout'		=> 'horizontal',
@@ -854,7 +854,7 @@ class acf_field_clone extends acf_field {
 		
 		
 		// prefix_label
-		$instructions = __('Labels will be displayed as %s', 'acf');
+		$instructions = __('Labels will be displayed as %s', 'osen');
 		$instructions = sprintf($instructions, '<code class="prefix-label-code-1"></code>');
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Prefix Field Labels','acf'),
@@ -868,7 +868,7 @@ class acf_field_clone extends acf_field {
 		
 		
 		// prefix_name
-		$instructions = __('Values will be saved as %s', 'acf');
+		$instructions = __('Values will be saved as %s', 'osen');
 		$instructions = sprintf($instructions, '<code class="prefix-name-code-1"></code>');
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Prefix Field Names','acf'),
@@ -989,11 +989,11 @@ class acf_field_clone extends acf_field {
 	function get_clone_setting_field_choice( $field ) {
 		
 		// bail early if no field
-		if( !$field ) return __('Unknown field', 'acf');
+		if( !$field ) return __('Unknown field', 'osen');
 		
 		
 		// title
-		$title = $field['label'] ? $field['label'] : __('(no title)', 'acf');
+		$title = $field['label'] ? $field['label'] : __('(no title)', 'osen');
 					
 		
 		// append type
@@ -1028,11 +1028,11 @@ class acf_field_clone extends acf_field {
 	function get_clone_setting_group_choice( $field_group ) {
 		
 		// bail early if no field group
-		if( !$field_group ) return __('Unknown field group', 'acf');
+		if( !$field_group ) return __('Unknown field group', 'osen');
 		
 		
 		// return
-		return sprintf( __('All fields from %s field group', 'acf'), $field_group['title'] );
+		return sprintf( __('All fields from %s field group', 'osen'), $field_group['title'] );
 		
 	}
 	

@@ -1,13 +1,60 @@
 /*
-Theme Name: My Theme
-Theme URI: https://osen.co.ke/
+Theme Name: Wp Theme
+Theme URI: https://themes.osen.services/wpt/
 Author: Osen Concepts <hi@osen.co.ke>
 Author URI: https://osen.co.ke/
 Description: Minimalist theme to create an awesome blog
 Requires at least: WordPress 5.4
+Tested up to: 5.4
+Requires PHP: 7.3
 Version: 0.0.1
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: tepid
-Tags: one-column, blog, minimalist
+Text Domain: osen
+Tags: one-column, blog
 */
+
+.wp-caption {
+    text-transform: none;
+}
+
+.wp-caption-text {
+    text-transform: none;
+}
+
+.sticky {
+    position: fixed;
+}
+
+.screen-reader-text {
+    display: none;
+}
+
+.gallery-caption {
+    color: black;
+}
+
+.bypostauthor {
+    color: black;
+}
+
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+a:not(.nav-link) {
+    color: #0085a1 !important;
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none;
+}

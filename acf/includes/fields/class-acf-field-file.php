@@ -54,9 +54,9 @@ class acf_field_file extends acf_field {
 		
 		// localize
 		acf_localize_text(array(
-		   	'Select File'	=> __('Select File', 'acf'),
-			'Edit File'		=> __('Edit File', 'acf'),
-			'Update File'	=> __('Update File', 'acf'),
+		   	'Select File'	=> __('Select File', 'osen'),
+			'Edit File'		=> __('Edit File', 'osen'),
+			'Update File'	=> __('Update File', 'osen'),
 	   	));
 	}
 	
@@ -138,20 +138,20 @@ class acf_field_file extends acf_field {
 				<strong data-name="title"><?php echo esc_html($o['title']); ?></strong>
 			</p>
 			<p>
-				<strong><?php _e('File name', 'acf'); ?>:</strong>
+				<strong><?php _e('File name', 'osen'); ?>:</strong>
 				<a data-name="filename" href="<?php echo esc_url($o['url']); ?>" target="_blank"><?php echo esc_html($o['filename']); ?></a>
 			</p>
 			<p>
-				<strong><?php _e('File size', 'acf'); ?>:</strong>
+				<strong><?php _e('File size', 'osen'); ?>:</strong>
 				<span data-name="filesize"><?php echo esc_html($o['filesize']); ?></span>
 			</p>
 		</div>
 		<div class="acf-actions -hover">
 			<?php 
 			if( $uploader != 'basic' ): 
-			?><a class="acf-icon -pencil dark" data-name="edit" href="#" title="<?php _e('Edit', 'acf'); ?>"></a><?php 
+			?><a class="acf-icon -pencil dark" data-name="edit" href="#" title="<?php _e('Edit', 'osen'); ?>"></a><?php 
 			endif;
-			?><a class="acf-icon -cancel dark" data-name="remove" href="#" title="<?php _e('Remove', 'acf'); ?>"></a>
+			?><a class="acf-icon -cancel dark" data-name="remove" href="#" title="<?php _e('Remove', 'osen'); ?>"></a>
 		</div>
 	</div>
 	<div class="hide-if-value">
@@ -233,8 +233,8 @@ class acf_field_file extends acf_field {
 			'name'			=> 'library',
 			'layout'		=> 'horizontal',
 			'choices' 		=> array(
-				'all'			=> __('All', 'acf'),
-				'uploadedTo'	=> __('Uploaded to post', 'acf')
+				'all'			=> __('All', 'osen'),
+				'uploadedTo'	=> __('Uploaded to post', 'osen')
 			)
 		));
 		
@@ -245,7 +245,7 @@ class acf_field_file extends acf_field {
 			'instructions'	=> __('Restrict which files can be uploaded','acf'),
 			'type'			=> 'text',
 			'name'			=> 'min_size',
-			'prepend'		=> __('File size', 'acf'),
+			'prepend'		=> __('File size', 'osen'),
 			'append'		=> 'MB',
 		));
 		
@@ -256,7 +256,7 @@ class acf_field_file extends acf_field {
 			'instructions'	=> __('Restrict which files can be uploaded','acf'),
 			'type'			=> 'text',
 			'name'			=> 'max_size',
-			'prepend'		=> __('File size', 'acf'),
+			'prepend'		=> __('File size', 'osen'),
 			'append'		=> 'MB',
 		));
 		

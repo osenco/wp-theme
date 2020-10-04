@@ -21,5 +21,3 @@ node_modules/
 *.log
 *.sql
 *.sqlite
-
-vendor/

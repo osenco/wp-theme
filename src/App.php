@@ -10,12 +10,19 @@
 
 namespace Osen\Theme\Wpt;
 
-/**
+class App
+{
+    public function __construct()
+    {
+        add_action('wp_head', array($this, 'os_pwa_set'));
+        add_action('init', array($this, 'os_manifest_json'));
+    }
+    /**
  * Addd web manifest and link for Progressive Web App functionality
  */
-function os_pwa_set()
-{ 
-    $url = esc_url(home_url('sw.js')); ?>
+    public function os_pwa_set()
+    {
+        $url = esc_url(home_url('sw.js')); ?>
 <meta name="theme-color" value="<?php os_theme_mod('os_manifest_color', 'white'); ?>">
 <meta name="mobile-web-app-capable" content="yes">
 
@@ -115,12 +122,11 @@ jQuery(document).ready(function($) {
 });
 </script>
 <?php
-}
-add_action('wp_head', 'os_pwa_set');
+    }
 
-function os_manifest_json()
-{
-    $manifest = array(
+    public function os_manifest_json()
+    {
+        $manifest = array(
         'name'                => get_theme_mod('os_manifest_name', get_bloginfo('name')),
         'short_name'        => get_theme_mod('os_manifest_short_name', get_bloginfo('name')),
         'description'        => get_theme_mod('os_manifest_description', get_bloginfo('description')),
@@ -144,8 +150,8 @@ function os_manifest_json()
         )
     );
 
-    if (isset($_GET['os_manifest_json'])) {
-        wp_send_json($manifest);
+        if (isset($_GET['os_manifest_json'])) {
+            wp_send_json($manifest);
+        }
     }
 }
-add_action('init', 'os_manifest_json');

@@ -58,10 +58,10 @@ class acf_field_relationship extends acf_field {
 		
 		// localize
 		acf_localize_text(array(
-			//'Minimum values reached ( {min} values )'	=> __('Minimum values reached ( {min} values )', 'acf'),
-			'Maximum values reached ( {max} values )'	=> __('Maximum values reached ( {max} values )', 'acf'),
-			'Loading'									=> __('Loading', 'acf'),
-			'No matches found'							=> __('No matches found', 'acf'),
+			//'Minimum values reached ( {min} values )'	=> __('Minimum values reached ( {min} values )', 'osen'),
+			'Maximum values reached ( {max} values )'	=> __('Maximum values reached ( {max} values )', 'osen'),
+			'Loading'									=> __('Loading', 'osen'),
+			'No matches found'							=> __('No matches found', 'osen'),
 	   	));
 	}
 	
@@ -408,7 +408,7 @@ class acf_field_relationship extends acf_field {
 		if( in_array('post_type', $filters) ) {
 			
 			$filter_post_type_choices = array(
-				''	=> __('Select post type', 'acf')
+				''	=> __('Select post type', 'osen')
 			) + acf_get_pretty_post_types( $post_type );
 		}
 		
@@ -417,7 +417,7 @@ class acf_field_relationship extends acf_field {
 			
 			$term_choices = array();
 			$filter_taxonomy_choices = array(
-				''	=> __('Select taxonomy', 'acf')
+				''	=> __('Select taxonomy', 'osen')
 			);
 			
 			// check for specific taxonomy setting
@@ -724,7 +724,7 @@ class acf_field_relationship extends acf_field {
 		// min
 		if( count($value) < $field['min'] ) {
 		
-			$valid = _n( '%s requires at least %s selection', '%s requires at least %s selections', $field['min'], 'acf' );
+			$valid = _n( '%s requires at least %s selection', '%s requires at least %s selections', $field['min'], 'osen' );
 			$valid = sprintf( $valid, $field['label'], $field['min'] );
 			
 		}

@@ -711,7 +711,7 @@ class acf_field_taxonomy extends acf_field {
 		// vars
 		$args = array(
 			'taxonomy'     		=> $field['taxonomy'],
-			'show_option_none'	=> sprintf( _x('No %s', 'No terms', 'acf'), strtolower($taxonomy_obj->labels->name) ),
+			'show_option_none'	=> sprintf( _x('No %s', 'No terms', 'osen'), strtolower($taxonomy_obj->labels->name) ),
 			'hide_empty'   		=> false,
 			'style'        		=> 'none',
 			'walker'       		=> new ACF_Taxonomy_Field_Walker( $field ),
@@ -768,12 +768,12 @@ class acf_field_taxonomy extends acf_field {
 			'optgroup'		=> true,
 			'choices'		=> array(
 				__("Multiple Values",'acf') => array(
-					'checkbox' => __('Checkbox', 'acf'),
-					'multi_select' => __('Multi Select', 'acf')
+					'checkbox' => __('Checkbox', 'osen'),
+					'multi_select' => __('Multi Select', 'osen')
 				),
 				__("Single Value",'acf') => array(
-					'radio' => __('Radio Buttons', 'acf'),
-					'select' => _x('Select', 'noun', 'acf')
+					'radio' => __('Radio Buttons', 'osen'),
+					'select' => _x('Select', 'noun', 'osen')
 				)
 			)
 		));
@@ -882,7 +882,7 @@ class acf_field_taxonomy extends acf_field {
 		// note: this situation should never occur due to condition of the add new button
 		if( !current_user_can( $taxonomy_obj->cap->manage_terms) ) {
 			wp_send_json_error(array(
-				'error'	=> sprintf( __('User unable to add new %s', 'acf'), $taxonomy_label )
+				'error'	=> sprintf( __('User unable to add new %s', 'osen'), $taxonomy_label )
 			));
 		}
 		
@@ -892,7 +892,7 @@ class acf_field_taxonomy extends acf_field {
 			// exists
 			if( term_exists($args['term_name'], $field['taxonomy'], $args['term_parent']) ) {
 				wp_send_json_error(array(
-					'error'	=> sprintf( __('%s already exists', 'acf'), $taxonomy_label )
+					'error'	=> sprintf( __('%s already exists', 'osen'), $taxonomy_label )
 				));
 			}
 			
@@ -924,7 +924,7 @@ class acf_field_taxonomy extends acf_field {
 		
 			// success
 			wp_send_json_success(array(
-				'message'		=> sprintf( __('%s added', 'acf'), $taxonomy_label ),
+				'message'		=> sprintf( __('%s added', 'osen'), $taxonomy_label ),
 				'term_id'		=> $term->term_id,
 				'term_name'		=> $term->name,
 				'term_label'	=> $prefix . $term->name,
@@ -936,7 +936,7 @@ class acf_field_taxonomy extends acf_field {
 		?><form method="post"><?php
 		
 		acf_render_field_wrap(array(
-			'label'			=> __('Name', 'acf'),
+			'label'			=> __('Name', 'osen'),
 			'name'			=> 'term_name',
 			'type'			=> 'text'
 		));
@@ -958,7 +958,7 @@ class acf_field_taxonomy extends acf_field {
 			}
 			
 			acf_render_field_wrap(array(
-				'label'			=> __('Parent', 'acf'),
+				'label'			=> __('Parent', 'osen'),
 				'name'			=> 'term_parent',
 				'type'			=> 'select',
 				'allow_null'	=> 1,
@@ -970,7 +970,7 @@ class acf_field_taxonomy extends acf_field {
 		
 		
 		?><p class="acf-submit">
-			<button class="acf-submit-button button button-primary" type="submit"><?php _e("Add", 'acf'); ?></button>
+			<button class="acf-submit-button button button-primary" type="submit"><?php _e("Add", 'osen'); ?></button>
 		</p>
 		</form><?php
 		

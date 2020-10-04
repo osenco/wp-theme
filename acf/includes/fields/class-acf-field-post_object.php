@@ -264,7 +264,7 @@ class acf_field_post_object extends acf_field {
 		
 		
 		// look for parent
-		$search = '| ' . __('Parent', 'acf') . ':';
+		$search = '| ' . __('Parent', 'osen') . ':';
 		$pos = strpos($text, $search);
 		
 		if( $pos !== false ) {

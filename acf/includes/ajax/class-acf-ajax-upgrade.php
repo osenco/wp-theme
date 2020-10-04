@@ -29,7 +29,7 @@ class ACF_Ajax_Upgrade extends ACF_Ajax {
 		
 		// Bail early if no upgrade avaiable.
 		if( !acf_has_upgrade() ) {
-			return new WP_Error( 'upgrade_error', __('No updates available.', 'acf') );
+			return new WP_Error( 'upgrade_error', __('No updates available.', 'osen') );
 		}
 		
 		// Listen for output.

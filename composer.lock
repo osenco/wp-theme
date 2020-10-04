@@ -4,52 +4,17 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "975f346f0247e3aa86a14a93735d852e",
-    "packages": [
-        {
-            "name": "osenco/wp-settings",
-            "version": "v1.20.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/osenco/wp-settings.git",
-                "reference": "3b361025c8e35ae5c53e50e62c889adaf25344a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/osenco/wp-settings/zipball/3b361025c8e35ae5c53e50e62c889adaf25344a0",
-                "reference": "3b361025c8e35ae5c53e50e62c889adaf25344a0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Osen\\Wp\\Settings\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Osen Concepts",
-                    "email": "hi@osen.co.ke"
-                }
-            ],
-            "description": "An interactive base to create your Wordpress settings page, and a foundation for your OOP plugins.",
-            "time": "2020-06-11T04:56:55+00:00"
-        }
-    ],
+    "content-hash": "e9271b340e8a33e186c0213424b2cc80",
+    "packages": [],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.3"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }

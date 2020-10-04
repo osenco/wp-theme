@@ -132,7 +132,7 @@ $meta = array(
 					'name'			=> 'width',
 					'prefix'		=> $field['prefix'] . '[wrapper]',
 					'value'			=> $field['wrapper']['width'],
-					'prepend'		=> __('width', 'acf'),
+					'prepend'		=> __('width', 'osen'),
 					'append'		=> '%',
 					'wrapper'		=> array(
 						'data-name' => 'wrapper',
@@ -147,7 +147,7 @@ $meta = array(
 					'name'			=> 'class',
 					'prefix'		=> $field['prefix'] . '[wrapper]',
 					'value'			=> $field['wrapper']['class'],
-					'prepend'		=> __('class', 'acf'),
+					'prepend'		=> __('class', 'osen'),
 					'wrapper'		=> array(
 						'data-append' => 'wrapper'
 					)
@@ -160,7 +160,7 @@ $meta = array(
 					'name'			=> 'id',
 					'prefix'		=> $field['prefix'] . '[wrapper]',
 					'value'			=> $field['wrapper']['id'],
-					'prepend'		=> __('id', 'acf'),
+					'prepend'		=> __('id', 'osen'),
 					'wrapper'		=> array(
 						'data-append' => 'wrapper'
 					)

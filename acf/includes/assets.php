@@ -181,23 +181,23 @@ class ACF_Assets {
 		acf_localize_text(array(
 			
 			// unload
-			'The changes you made will be lost if you navigate away from this page'	=> __('The changes you made will be lost if you navigate away from this page', 'acf'),
+			'The changes you made will be lost if you navigate away from this page'	=> __('The changes you made will be lost if you navigate away from this page', 'osen'),
 			
 			// media
-			'Select.verb'			=> _x('Select', 'verb', 'acf'),
-			'Edit.verb'				=> _x('Edit', 'verb', 'acf'),
-			'Update.verb'			=> _x('Update', 'verb', 'acf'),
-			'Uploaded to this post'	=> __('Uploaded to this post', 'acf'),
-			'Expand Details' 		=> __('Expand Details', 'acf'),
-			'Collapse Details' 		=> __('Collapse Details', 'acf'),
-			'Restricted'			=> __('Restricted', 'acf'),
-			'All images'			=> __('All images', 'acf'),
+			'Select.verb'			=> _x('Select', 'verb', 'osen'),
+			'Edit.verb'				=> _x('Edit', 'verb', 'osen'),
+			'Update.verb'			=> _x('Update', 'verb', 'osen'),
+			'Uploaded to this post'	=> __('Uploaded to this post', 'osen'),
+			'Expand Details' 		=> __('Expand Details', 'osen'),
+			'Collapse Details' 		=> __('Collapse Details', 'osen'),
+			'Restricted'			=> __('Restricted', 'osen'),
+			'All images'			=> __('All images', 'osen'),
 			
 			// validation
-			'Validation successful'			=> __('Validation successful', 'acf'),
-			'Validation failed'				=> __('Validation failed', 'acf'),
-			'1 field requires attention'	=> __('1 field requires attention', 'acf'),
-			'%d fields require attention'	=> __('%d fields require attention', 'acf'),
+			'Validation successful'			=> __('Validation successful', 'osen'),
+			'Validation failed'				=> __('Validation failed', 'osen'),
+			'1 field requires attention'	=> __('1 field requires attention', 'osen'),
+			'%d fields require attention'	=> __('%d fields require attention', 'osen'),
 			
 			// tooltip
 			'Are you sure?'			=> __('Are you sure?','acf'),
@@ -207,19 +207,19 @@ class ACF_Assets {
 			'Cancel'				=> __('Cancel','acf'),
 			
 			// conditions
-			'Has any value'				=> __('Has any value', 'acf'),
-			'Has no value'				=> __('Has no value', 'acf'),
-			'Value is equal to'			=> __('Value is equal to', 'acf'),
-			'Value is not equal to'		=> __('Value is not equal to', 'acf'),
-			'Value matches pattern'		=> __('Value matches pattern', 'acf'),
-			'Value contains'			=> __('Value contains', 'acf'),
-			'Value is greater than'		=> __('Value is greater than', 'acf'),
-			'Value is less than'		=> __('Value is less than', 'acf'),
-			'Selection is greater than'	=> __('Selection is greater than', 'acf'),
-			'Selection is less than'	=> __('Selection is less than', 'acf'),
+			'Has any value'				=> __('Has any value', 'osen'),
+			'Has no value'				=> __('Has no value', 'osen'),
+			'Value is equal to'			=> __('Value is equal to', 'osen'),
+			'Value is not equal to'		=> __('Value is not equal to', 'osen'),
+			'Value matches pattern'		=> __('Value matches pattern', 'osen'),
+			'Value contains'			=> __('Value contains', 'osen'),
+			'Value is greater than'		=> __('Value is greater than', 'osen'),
+			'Value is less than'		=> __('Value is less than', 'osen'),
+			'Selection is greater than'	=> __('Selection is greater than', 'osen'),
+			'Selection is less than'	=> __('Selection is less than', 'osen'),
 			
 			// misc
-			'Edit field group'	=> __('Edit field group', 'acf'),
+			'Edit field group'	=> __('Edit field group', 'osen'),
 		));
 		
 		// enqueue

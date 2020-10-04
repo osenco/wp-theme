@@ -8,15 +8,49 @@
  *
  */ ?>
 <?php get_header(); ?>
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div style="background: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover; background-position: center;">
-            <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail(); ?>
-            </a>
-            <?php the_title(); ?>
-            <?php the_category(' ', ''); ?><?php echo get_the_date('D, F d, Y', get_the_ID()); ?>
-            <?php the_excerpt(); ?>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('<?php echo esc_url( get_header_image() ); ?>')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1><?php the_archive_title(); ?></h1>
+                    <span class="subheading"><?php the_archive_description(); ?></span>
+                </div>
+            </div>
         </div>
-<?php endwhile;
-endif; ?>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <div class="post-preview">
+                <a href="<?php the_permalink(); ?>">
+                    <h2 class="post-title">
+                        <?php the_title(); ?>
+                    </h2>
+                    <h3 class="post-subtitle">
+                        <?php the_excerpt(); ?>
+                    </h3>
+                </a>
+                <p class="post-meta">
+                    Posted by <?php the_author_posts_link(); ?> in <?php the_category(' ', ''); ?> on
+                    <?php echo get_the_date('D, F d, Y', get_the_ID()); ?>
+                </p>
+            </div>
+            <hr>
+            <?php endwhile;
+            endif; ?>
+            <!-- Pager -->
+            <div class="clearfix">
+                <?php pagination_nav(); ?>
+            </div>
+        </div>
+    </div>
+</div>
 <?php get_footer(); ?>

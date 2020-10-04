@@ -84,7 +84,7 @@ class acf_location_page_template extends acf_location {
 		
 		// Default choices.
 		$choices = array(
-			'default' => apply_filters( 'default_page_template_title',  __('Default Template', 'acf') )
+			'default' => apply_filters( 'default_page_template_title',  __('Default Template', 'osen') )
 		);
 		
 		// Load all templates, and merge in 'page' templates.

@@ -154,7 +154,7 @@ class acf_field_text extends acf_field {
 		
 		// Check maxlength
 		if( $field['maxlength'] && mb_strlen(wp_unslash($value)) > $field['maxlength'] ) {
-			return sprintf( __('Value must not exceed %d characters', 'acf'), $field['maxlength'] );
+			return sprintf( __('Value must not exceed %d characters', 'osen'), $field['maxlength'] );
 		}
 		
 		// Return.

@@ -76,8 +76,8 @@ class acf_field_true_false extends acf_field {
 		if( $field['ui'] ) {
 			
 			// vars
-			if( $field['ui_on_text'] === '' ) $field['ui_on_text'] = __('Yes', 'acf');
-			if( $field['ui_off_text'] === '' ) $field['ui_off_text'] = __('No', 'acf');
+			if( $field['ui_on_text'] === '' ) $field['ui_on_text'] = __('Yes', 'osen');
+			if( $field['ui_off_text'] === '' ) $field['ui_off_text'] = __('No', 'osen');
 			
 			
 			// update input
@@ -156,7 +156,7 @@ class acf_field_true_false extends acf_field {
 			'instructions'	=> __('Text shown when active','acf'),
 			'type'			=> 'text',
 			'name'			=> 'ui_on_text',
-			'placeholder'	=> __('Yes', 'acf'),
+			'placeholder'	=> __('Yes', 'osen'),
 			'conditions'	=> array(
 				'field'		=> 'ui',
 				'operator'	=> '==',
@@ -171,7 +171,7 @@ class acf_field_true_false extends acf_field {
 			'instructions'	=> __('Text shown when inactive','acf'),
 			'type'			=> 'text',
 			'name'			=> 'ui_off_text',
-			'placeholder'	=> __('No', 'acf'),
+			'placeholder'	=> __('No', 'osen'),
 			'conditions'	=> array(
 				'field'		=> 'ui',
 				'operator'	=> '==',

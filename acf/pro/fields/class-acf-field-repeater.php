@@ -62,8 +62,8 @@ class acf_field_repeater extends acf_field {
 		
 		// localize
 		acf_localize_text(array(
-		   	'Minimum rows reached ({min} rows)'	=> __('Minimum rows reached ({min} rows)', 'acf'),
-			'Maximum rows reached ({max} rows)'	=> __('Maximum rows reached ({max} rows)', 'acf'),
+		   	'Minimum rows reached ({min} rows)'	=> __('Minimum rows reached ({min} rows)', 'osen'),
+			'Maximum rows reached ({max} rows)'	=> __('Maximum rows reached ({max} rows)', 'osen'),
 	   	));
 	}
 	
@@ -190,7 +190,7 @@ class acf_field_repeater extends acf_field {
 		
 		
 		// button label
-		if( $field['button_label'] === '' ) $field['button_label'] = __('Add Row', 'acf');
+		if( $field['button_label'] === '' ) $field['button_label'] = __('Add Row', 'osen');
 		
 		
 		// field wrap
@@ -658,7 +658,7 @@ class acf_field_repeater extends acf_field {
 		if( $min && $count < $min ) {
 			
 			// create error
-			$error = __('Minimum rows reached ({min} rows)', 'acf');
+			$error = __('Minimum rows reached ({min} rows)', 'osen');
  			$error = str_replace('{min}', $min, $error);
  			
  			// return

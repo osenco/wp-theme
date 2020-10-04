@@ -76,7 +76,7 @@ class ACF_Location_Block extends acf_location {
 		
 		// loop
 		if( $blocks ) {
-			$choices['all'] = __('All', 'acf');
+			$choices['all'] = __('All', 'osen');
 			foreach( $blocks as $block ) {
 				$choices[ $block['name'] ] = $block['title'];
 			}

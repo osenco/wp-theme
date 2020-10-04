@@ -65,10 +65,10 @@ class acf_field_color_picker extends acf_field {
 			
 			// localize
 		    wp_localize_script('wp-color-picker', 'wpColorPickerL10n', array(
-		        'clear'			=> __('Clear', 'acf' ),
-		        'defaultString'	=> __('Default', 'acf' ),
-		        'pick'			=> __('Select Color', 'acf' ),
-		        'current'		=> __('Current Color', 'acf' )
+		        'clear'			=> __('Clear', 'osen' ),
+		        'defaultString'	=> __('Default', 'osen' ),
+		        'pick'			=> __('Select Color', 'osen' ),
+		        'current'		=> __('Current Color', 'osen' )
 		    )); 
 			
 		}

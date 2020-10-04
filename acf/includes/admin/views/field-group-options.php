@@ -13,8 +13,8 @@ acf_render_field_wrap(array(
 	'prefix'		=> 'acf_field_group',
 	'value'			=> $field_group['active'],
 	'ui'			=> 1,
-	//'ui_on_text'	=> __('Active', 'acf'),
-	//'ui_off_text'	=> __('Inactive', 'acf'),
+	//'ui_on_text'	=> __('Active', 'osen'),
+	//'ui_off_text'	=> __('Inactive', 'osen'),
 ));
 
 
@@ -104,21 +104,21 @@ acf_render_field_wrap(array(
 
 // hide on screen
 $choices = array(
-	'permalink'			=>	__("Permalink", 'acf'),
+	'permalink'			=>	__("Permalink", 'osen'),
 	'the_content'		=>	__("Content Editor",'acf'),
-	'excerpt'			=>	__("Excerpt", 'acf'),
-	'custom_fields'		=>	__("Custom Fields", 'acf'),
-	'discussion'		=>	__("Discussion", 'acf'),
-	'comments'			=>	__("Comments", 'acf'),
-	'revisions'			=>	__("Revisions", 'acf'),
-	'slug'				=>	__("Slug", 'acf'),
-	'author'			=>	__("Author", 'acf'),
-	'format'			=>	__("Format", 'acf'),
-	'page_attributes'	=>	__("Page Attributes", 'acf'),
-	'featured_image'	=>	__("Featured Image", 'acf'),
-	'categories'		=>	__("Categories", 'acf'),
-	'tags'				=>	__("Tags", 'acf'),
-	'send-trackbacks'	=>	__("Send Trackbacks", 'acf'),
+	'excerpt'			=>	__("Excerpt", 'osen'),
+	'custom_fields'		=>	__("Custom Fields", 'osen'),
+	'discussion'		=>	__("Discussion", 'osen'),
+	'comments'			=>	__("Comments", 'osen'),
+	'revisions'			=>	__("Revisions", 'osen'),
+	'slug'				=>	__("Slug", 'osen'),
+	'author'			=>	__("Author", 'osen'),
+	'format'			=>	__("Format", 'osen'),
+	'page_attributes'	=>	__("Page Attributes", 'osen'),
+	'featured_image'	=>	__("Featured Image", 'osen'),
+	'categories'		=>	__("Categories", 'osen'),
+	'tags'				=>	__("Tags", 'osen'),
+	'send-trackbacks'	=>	__("Send Trackbacks", 'osen'),
 );
 if( acf_get_setting('remove_wp_meta_box') ) {
 	unset( $choices['custom_fields'] );	

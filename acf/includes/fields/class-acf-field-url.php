@@ -148,7 +148,7 @@ class acf_field_url extends acf_field {
 			
 		} else {
 			
-			$valid = __('Value must be a valid URL', 'acf');
+			$valid = __('Value must be a valid URL', 'osen');
 			
 		}
 		

@@ -170,7 +170,7 @@ class ACF_Admin_Upgrade {
 		
 		// vars
 		$view = array(
-			'button_text'	=> __("Upgrade Database", 'acf'),
+			'button_text'	=> __("Upgrade Database", 'osen'),
 			'button_url'	=> admin_url('index.php?page=acf-upgrade'),
 			'confirm'		=> true
 		);
@@ -194,7 +194,7 @@ class ACF_Admin_Upgrade {
 		
 		// vars
 		$view = array(
-			'button_text'	=> __("Review sites & upgrade", 'acf'),
+			'button_text'	=> __("Review sites & upgrade", 'osen'),
 			'button_url'	=> network_admin_url('index.php?page=acf-upgrade-network'),
 			'confirm'		=> false
 		);

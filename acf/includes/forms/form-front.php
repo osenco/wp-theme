@@ -35,7 +35,7 @@ class acf_form_front {
 				'prefix'	=> 'acf',
 				'name'		=> '_post_title',
 				'key'		=> '_post_title',
-				'label'		=> __('Title', 'acf'),
+				'label'		=> __('Title', 'osen'),
 				'type'		=> 'text',
 				'required'	=> true,
 			),
@@ -44,7 +44,7 @@ class acf_form_front {
 				'prefix'	=> 'acf',
 				'name'		=> '_post_content',
 				'key'		=> '_post_content',
-				'label'		=> __('Content', 'acf'),
+				'label'		=> __('Content', 'osen'),
 				'type'		=> 'wysiwyg',
 			),
 			
@@ -52,7 +52,7 @@ class acf_form_front {
 				'prefix'	=> 'acf',
 				'name'		=> '_validate_email',
 				'key'		=> '_validate_email',
-				'label'		=> __('Validate Email', 'acf'),
+				'label'		=> __('Validate Email', 'osen'),
 				'type'		=> 'text',
 				'value'		=> '',
 				'wrapper'	=> array('style' => 'display:none !important;')
@@ -101,8 +101,8 @@ class acf_form_front {
 			'return'				=> add_query_arg( 'updated', 'true', acf_get_current_url() ),
 			'html_before_fields'	=> '',
 			'html_after_fields'		=> '',
-			'submit_value'			=> __("Update", 'acf'),
-			'updated_message'		=> __("Post updated", 'acf'),
+			'submit_value'			=> __("Update", 'osen'),
+			'updated_message'		=> __("Post updated", 'osen'),
 			'label_placement'		=> 'top',
 			'instruction_placement'	=> 'label',
 			'field_el'				=> 'div',
@@ -228,7 +228,7 @@ class acf_form_front {
 		// honeypot
 		if( !empty($_POST['acf']['_validate_email']) ) {
 			
-			acf_add_validation_error( '', __('Spam Detected', 'acf') );
+			acf_add_validation_error( '', __('Spam Detected', 'osen') );
 			
 		}
 		

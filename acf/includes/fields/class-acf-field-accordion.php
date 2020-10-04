@@ -80,7 +80,7 @@ class acf_field__accordion extends acf_field {
 /*
 		// message
 		$message = '';
-		$message .= '<p>' . __( 'Accordions help you organize fields into panels that open and close.', 'acf') . '</p>';
+		$message .= '<p>' . __( 'Accordions help you organize fields into panels that open and close.', 'osen') . '</p>';
 		$message .= '<p>' . __( 'All fields following this accordion (or until another accordion is defined) will be grouped together.','acf') . '</p>';
 		
 		

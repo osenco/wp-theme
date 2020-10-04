@@ -82,7 +82,7 @@ class acf_field_tab extends acf_field {
 /*
 		// message
 		$message = '';
-		$message .= '<p>' . __( 'Use "Tab Fields" to better organize your edit screen by grouping fields together.', 'acf') . '</p>';
+		$message .= '<p>' . __( 'Use "Tab Fields" to better organize your edit screen by grouping fields together.', 'osen') . '</p>';
 		$message .= '<p>' . __( 'All fields following this "tab field" (or until another "tab field" is defined) will be grouped together using this field\'s label as the tab heading.','acf') . '</p>';
 		
 		
@@ -103,8 +103,8 @@ class acf_field_tab extends acf_field {
 			'type'			=> 'select',
 			'name'			=> 'placement',
 			'choices' 		=> array(
-				'top'			=>	__("Top aligned", 'acf'),
-				'left'			=>	__("Left aligned", 'acf'),
+				'top'			=>	__("Top aligned", 'osen'),
+				'left'			=>	__("Left aligned", 'osen'),
 			)
 		));
 		
@@ -112,7 +112,7 @@ class acf_field_tab extends acf_field {
 		// endpoint
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Endpoint','acf'),
-			'instructions'	=> __('Define an endpoint for the previous tabs to stop. This will start a new group of tabs.', 'acf'),
+			'instructions'	=> __('Define an endpoint for the previous tabs to stop. This will start a new group of tabs.', 'osen'),
 			'name'			=> 'endpoint',
 			'type'			=> 'true_false',
 			'ui'			=> 1,

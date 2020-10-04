@@ -76,7 +76,7 @@ class acf_location_options_page extends acf_location {
 				$choices[ $page['menu_slug'] ] = $page['page_title'];
 			}
 		} else {
-			$choices[''] = __('No options pages exist', 'acf');
+			$choices[''] = __('No options pages exist', 'osen');
 		}
 		
 		

@@ -94,9 +94,9 @@ class acf_location_current_user extends acf_location {
 	function rule_values( $choices, $rule ) {
 		
 		return array(
-			'logged_in'		=> __('Logged in', 'acf'),
-			'viewing_front'	=> __('Viewing front end', 'acf'),
-			'viewing_back'	=> __('Viewing back end', 'acf')
+			'logged_in'		=> __('Logged in', 'osen'),
+			'viewing_front'	=> __('Viewing front end', 'osen'),
+			'viewing_back'	=> __('Viewing back end', 'osen')
 		);
 		
 	}

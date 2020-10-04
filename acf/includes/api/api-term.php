@@ -144,7 +144,7 @@ function acf_get_term_title( $term ) {
 	
 	// allow for empty name
 	if( $title === '' ) {
-		$title = __('(no title)', 'acf');
+		$title = __('(no title)', 'osen');
 	}
 	
 	// prepent ancestors indentation

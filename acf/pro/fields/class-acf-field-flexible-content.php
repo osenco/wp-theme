@@ -70,19 +70,19 @@ class acf_field_flexible_content extends acf_field {
 		acf_localize_text(array(
 			
 			// identifiers
-		   	'layout'													=> __('layout', 'acf'),
-			'layouts'													=> __('layouts', 'acf'),
+		   	'layout'													=> __('layout', 'osen'),
+			'layouts'													=> __('layouts', 'osen'),
 			
 			// min / max
-			'This field requires at least {min} {label} {identifier}'	=> __('This field requires at least {min} {label} {identifier}', 'acf'),
-			'This field has a limit of {max} {label} {identifier}'		=> __('This field has a limit of {max} {label} {identifier}', 'acf'),
+			'This field requires at least {min} {label} {identifier}'	=> __('This field requires at least {min} {label} {identifier}', 'osen'),
+			'This field has a limit of {max} {label} {identifier}'		=> __('This field has a limit of {max} {label} {identifier}', 'osen'),
 			
 			// popup badge
-			'{available} {label} {identifier} available (max {max})'	=> __('{available} {label} {identifier} available (max {max})', 'acf'),
-			'{required} {label} {identifier} required (min {min})'		=> __('{required} {label} {identifier} required (min {min})', 'acf'),
+			'{available} {label} {identifier} available (max {max})'	=> __('{available} {label} {identifier} available (max {max})', 'osen'),
+			'{required} {label} {identifier} required (min {min})'		=> __('{required} {label} {identifier} required (min {min})', 'osen'),
 			
 			// field settings
-			'Flexible Content requires at least 1 layout'				=> __('Flexible Content requires at least 1 layout', 'acf')
+			'Flexible Content requires at least 1 layout'				=> __('Flexible Content requires at least 1 layout', 'osen')
 	   	));
 	}
 	
@@ -920,7 +920,7 @@ class acf_field_flexible_content extends acf_field {
 		if( $min && $count < $min ) {
 			
 			// vars
-			$error = __('This field requires at least {min} {label} {identifier}', 'acf');
+			$error = __('This field requires at least {min} {label} {identifier}', 'osen');
 			$identifier = _n('layout', 'layouts', $min);
 			
  			// replace
@@ -1002,7 +1002,7 @@ class acf_field_flexible_content extends acf_field {
 			if( $min && $count < $min ) {
 				
 				// vars
-				$error = __('This field requires at least {min} {label} {identifier}', 'acf');
+				$error = __('This field requires at least {min} {label} {identifier}', 'osen');
 				$identifier = _n('layout', 'layouts', $min);
 				
 	 			// replace

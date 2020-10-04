@@ -90,10 +90,10 @@ class acf_locations {
 		// vars
 		$groups = array();
 		$l10n = array(
-			'post'		=> __('Post', 'acf'),
-			'page'		=> __('Page', 'acf'),
-			'user'		=> __('User', 'acf'),
-			'forms'		=> __('Forms', 'acf'),
+			'post'		=> __('Post', 'osen'),
+			'page'		=> __('Page', 'osen'),
+			'user'		=> __('User', 'osen'),
+			'forms'		=> __('Forms', 'osen'),
 		);
 		
 			

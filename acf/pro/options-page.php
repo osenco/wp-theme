@@ -48,7 +48,7 @@ class acf_options_page {
 		// default
 		if( empty($page) ) {
 			
-			$page_title =  __('Options', 'acf');
+			$page_title =  __('Options', 'osen');
 			$page = array(
 				'page_title'	=> $page_title,
 				'menu_title'	=> $page_title,
@@ -78,8 +78,8 @@ class acf_options_page {
 			'redirect'			=> true,
 			'post_id'			=> 'options',
 			'autoload'			=> false,
-			'update_button'		=> __('Update', 'acf'),
-			'updated_message'	=> __("Options Updated", 'acf'),
+			'update_button'		=> __('Update', 'osen'),
+			'updated_message'	=> __("Options Updated", 'osen'),
 		));
 		
 		

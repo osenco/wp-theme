@@ -1,5 +1,5 @@
 <?php
-	
+
 // Numbered Pagination
 if (!function_exists('osen_pagination')) {
 
@@ -123,8 +123,9 @@ function setPostViews($postID)
 // Remove issues with prefetching adding extra views
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
-function show_image($path = ''){
-	echo get_template_directory_uri()."/{$path}";
+function show_image($path = '')
+{
+	echo esc_url(get_template_directory_uri()) . "/{$path}";
 }
 
 
@@ -159,4 +160,24 @@ function os_theme_mod($key, $default = false, $before = '', $after = '')
 	if (get_theme_mod($key) || $default !== false) {
 		echo $before . get_theme_mod($key, $default) . $after;
 	}
+}
+
+function pagination_nav()
+{
+	global $wp_query;
+
+	if ($wp_query->max_num_pages > 1) { ?>
+		<nav class="pagination justify-content-between" role="navigation">
+			<div class="nav-next float-left"><?php previous_posts_link('<button class="btn btn-primary">&larr; Newer Posts</button>'); ?></div>
+			<div class="nav-previous float-right"><?php next_posts_link('<button class="btn btn-primary">Older posts &rarr;</button>'); ?></div>
+		</nav>
+	<?php }
+}
+
+function previous_next()
+{ ?>
+	<nav class="pagination justify-content-between px-5" role="navigation">
+		<div class="nav-previous float-left"><?php previous_post_link('&larr; %link'); ?></div>
+		<div class="nav-next float-right"><?php next_post_link('%link &rarr;'); ?></div>
+	</nav><?php
 }

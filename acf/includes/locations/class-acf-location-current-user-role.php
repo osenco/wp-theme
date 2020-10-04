@@ -107,7 +107,7 @@ class acf_location_current_user_role extends acf_location {
 		// multi-site
 		if( is_multisite() ) {
 			
-			$prepend = array( 'super_admin' => __('Super Admin', 'acf') );
+			$prepend = array( 'super_admin' => __('Super Admin', 'osen') );
 			$choices = array_merge( $prepend, $choices );
 			
 		}
