@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'a5d117edbcb2e36029276fd5a19fbc0c' => $baseDir . '/helpers.php',
     '2f28e98fc684a92c036039aa976e7689' => $baseDir . '/acf/acf.php',
     'd0cb3d9cc7d31885bd8557771118f0b0' => $baseDir . '/cpt/cpt.php',
 );

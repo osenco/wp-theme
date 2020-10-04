@@ -18,7 +18,6 @@
             "Osen\\Theme\\Wpt\\": "src/"
         },
         "files": [
-            "helpers.php",
             "acf/acf.php",
             "cpt/cpt.php"
         ]
