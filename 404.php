@@ -10,7 +10,7 @@
 <?php get_header(); ?>
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('<?php echo esc_url( get_header_image() ); ?>')">
+<header class="masthead" style="background-image: url('<?php echo esc_url(get_header_image()); ?>')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -28,7 +28,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-10 mx-auto">
-                <a class="btn btn-primary btn-block" href="<?php echo esc_url(home_url()); ?>">Go back home &rarr;</a>
+            <a class="btn btn-primary btn-block text-white" href="<?php echo esc_url(home_url()); ?>">&larr; Go back home</a>
         </div>
     </div>
 </div>
