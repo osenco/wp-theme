@@ -33,7 +33,6 @@ class Setup
         add_action('pre_get_posts', array($this, 'os_add_custom_type_to_query'));
         add_filter('next_posts_link_attributes', array($this, 'wpse_next'));
         add_filter('the_tags', array($this, 'tag_badges'), 10, 1);
-        remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
     }
 
     /**
